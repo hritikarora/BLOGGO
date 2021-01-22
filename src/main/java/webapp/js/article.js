@@ -1,6 +1,15 @@
+
 window.onload=fetch_content(localStorage.getItem("topic"));
 
 async function fetch_content(topic){
+
+        const token = localStorage.getItem('name');
+        if (!token)
+        {
+            window.alert("please login to view this");
+            location.href="indexPage.html";
+        }
+
     let response = await fetch("api/blog/get" ,
     {
         method : 'POST',
@@ -10,16 +19,16 @@ async function fetch_content(topic){
     body: JSON.stringify({
         topic: topic
     })
-    }).then(data => console.log(data));
+    });
 
     console.log("before");
-    let article = response.json(); // read response body and parse as JSON
+    let article = await response.json(); // read response body and parse as JSON
     console.log(article);
 
     console.log("after");
-    document.getElementById("topic").innerHTML = article[1];
+    document.getElementById("topic").innerHTML = article['topic'];
 
-    document.getElementById("desc").innerHTML = article[2];
+    document.getElementById("desc").innerHTML = article['description'];
 
-    document.getElementById("content").innerHTML = article[3];
+    document.getElementById("content").innerHTML = article['body'];
 }
