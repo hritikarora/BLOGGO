@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/article.js"></script>
 </head>
 <body>
 
@@ -34,7 +33,7 @@
 
     <div class="col-sm-4">
 	<div id="blog1" class="thumbnail">
-	<a href="article.html" onclick="fetch_content('how to begin web developement')">
+	<a href="article.html" onclick='localStorage.setItem("topic","how to begin web developement")'>
       <img src="assets/images/blog1.jpg" style="width:100%"></img>
 	  <div class="caption">
 	  <p>How to begin Web development</p>
@@ -45,7 +44,7 @@
 
     <div class="col-sm-4">
 	<div id="blog2" class="thumbnail">
-	<a href="article.html" onclick="fetch_content('scope in web developement')">
+	<a href="article.html" onclick="localStorage.setItem('topic','scope in web developement')">
       <img src="assets/images/blog2.jpg" style="width:100%"></img>
 	  <div class="caption">
 	  <p>Scope in web development</p>
@@ -56,7 +55,7 @@
 
 	<div class="col-sm-4">
 	<div id="blog3" class="thumbnail">
-	<a href="article.html" onclick="fetch_content('some important tips for web developement')">
+	<a href="article.html" onclick="localStorage.setItem('topic','some important tips for web developement')">
       <img src="assets/images/blog3.jpg" style="width:100%"></img>
 	  <div class="caption">
 	  <p>Some important tips for web development</p>

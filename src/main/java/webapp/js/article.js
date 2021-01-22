@@ -1,3 +1,4 @@
+window.onload=fetch_content(localStorage.getItem("topic"));
 
 async function fetch_content(topic){
     let response = await fetch("api/blog/get" ,
@@ -12,7 +13,7 @@ async function fetch_content(topic){
     }).then(data => console.log(data));
 
     console.log("before");
-    let article = await response.json(); // read response body and parse as JSON
+    let article = response.json(); // read response body and parse as JSON
     console.log(article);
 
     console.log("after");

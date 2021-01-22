@@ -22,9 +22,11 @@ login_form.addEventListener('submit', async (e) => {
             let data = response.json();
             document.getElementById("submit-button").style.display = "block";
             document.getElementById("spinner-button").style.display = "none";
+            document.cookie="name="+document.getElementById('username');
+            localStorage.setItem('name',document.getElementById('username'));
 
+            location.href="afterLogin.html";
 
-            location.href = "afterLogin.html";
         }else{
             console.log("not executed");
             document.getElementById("login-alert").style.display = "block";
