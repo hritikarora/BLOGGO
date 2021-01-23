@@ -15,6 +15,7 @@ public class blogInfo {
     private String description;
     private String body;
 
+
     public blogInfo() {
     }
 
@@ -55,4 +56,5 @@ public class blogInfo {
     public void setBody(String body) {
         this.body = body;
     }
+
 }

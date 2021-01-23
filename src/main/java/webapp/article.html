@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>BLOGGO</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/article.js"></script>
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
 
 /* Add a gray background color with some padding */
 body {
@@ -18,78 +17,33 @@ body {
   padding: 20px;
   background: #f1f1f1;
 }
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-</style>
+  </style>
 </head>
+
 <body>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2 style="text-align:center" id="topic"></h2>
-      <h5 style="text-align:center" id="desc"></h5>
-      <img src="assets/images/blog1.jpg" style="margin-left:auto;margin-right:auto;width:50%;display:block"></img>
-      <p id="content"></p>
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="">BLOGGO</a>
     </div>
-   </div>
+    <ul class="nav navbar-nav">
+      <li><a href="afterLogin.html">Home</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="indexPage.html" onclick="localStorage.removeItem('name')"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row">
+    <div class="card">
+      <h1 style="text-align:center" id="topic"></h1>
+      <h2 style="text-align:center" id="desc"></h2>
+
+      <img src="" id="img" style="margin-left:auto;margin-right:auto;width:50%;display:block" alt=""/>
+      <h3 id="content"></h3>
+    </div>
 </div>
   <!--
   <div class="rightcolumn">

@@ -31,4 +31,6 @@ async function fetch_content(topic){
     document.getElementById("desc").innerHTML = article['description'];
 
     document.getElementById("content").innerHTML = article['body'];
+
+    document.getElementById("img").innerHTML = article['image'];
 }
